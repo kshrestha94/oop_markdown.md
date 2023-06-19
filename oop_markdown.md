@@ -1,3 +1,6 @@
+
+# Object Orientated Programming 
+
 ```python
 OOP - object orientated programming. 
 •	Viewing your code into an object and manipulating it.
@@ -5,6 +8,7 @@ OOP - object orientated programming.
 •	Must be able to Read and understand OOP.
 
 Class – Setting data or function into the same object for you to capitalize and make a template.
+    
 Example:
 Class Dog: 
 animal_kind = Canine (variable for the class made)
@@ -25,6 +29,11 @@ OOP – methodology of programming – The Four Pillars
 3.	Inheritance - inherit that variables and class methods from the parent class.
 4.	Polymorphism – methods can have the same name but act differently. 
 
+```
+```python
+
+
+
 Abstraction example – class animal 
 Class Animal:
 Def  __init__(self):       # define initialize self
@@ -32,16 +41,22 @@ Define methods: True statements.
 # Define abstract method eg
 Def breathe(self):
 Print(“ one breath at a time, in and out)
+```python
+
 
 #create animal in class 
 Cat = animal() # if cat is animal class then cat will breath and adopt method of def breath 
 Cat.breath()
 
-########################################################### showcasing inheritance
+```
+```python
+
+
+########################################################### showcasing inheritance #############
 
 from animal import Animal # import animal base class from animal 
 
-class Reptile(Animal): # inherit animal parent class 
+class Reptile(Animal): # inherit animal parent class animal, creating new reptile class
 
     def __init__(self):
         super().__init__() # initialising base class - inherit from Animal creating a reptile
@@ -50,24 +65,19 @@ class Reptile(Animal): # inherit animal parent class
         self.hear_chambers = [3, 4]
         self.amniotic_eggs = None  # Not true for all reptiles # none function
 
-    def seek_heat(self):
-        print("its chilly outside, i need a sunbed")
-
-
-
+    
     def hunt(self):
         print("Hunting prey")
 
-    def use_venom(self):
-        print("if i have it, may as well use it")
-
-    def attract_mate_through_scent(self):
-        print("time to put on the aftershave")
+    
 
 bulbasaur = Reptile()
 
 bulbasaur.hunt() # self method 
 bulbasaur.breathe() # inheratace method 
+```
+
+```python
 
 
 #################################################################################################################
@@ -76,15 +86,12 @@ bulbasaur.breathe() # inheratace method
 
 from reptile import Reptile # import class from repltile 
 
-class Snake(Reptile): # create new class as snake 
+class Snake(Reptile): # create new class as snake but refer to reptile 
 
     def __init__(self): # define self methods 
         super().__init__()
-        self.forked_tongue = True
-        self.cold_blooded = True
         self.venom = None # not all snakes are venomous
-        self.limbs = False
-        self.tetrapod = False
+        
 
     def use_tongue_to_smell(self):
         print("do i say it smells nice, or tastes nice...?")
@@ -107,34 +114,29 @@ sidney.use_tongue_to_smell() # Snake method
 # _protected
 # __private
 
+```
+
+
+```python
+
+
 ##################################################################################################################
 ################################# Polymorphism - last pillar - methods of the same name but act differently 
 
-from snake import Snake
+from snake import Snake import snake class from snake
 
-class Python(Snake):
-    def __init__(self):
+class Python(Snake): #creating python class with reference to snake
+    def __init__(self): # defining self methods 
         super().__init__()
-        self.large = True
+        self.large = True # True boolean 
         self.two_lungs = True
         self.venom = False
 
-    def digest_large_prey(self):
-        print("ok, hand me the stretchy pants")
-
-    def constrict(self):
-        print("and squeeze")
-
-    def climb(self):
-        print("up we go")
-
-    def shed_skin(self):
-        print("I'm growing out of this now")
 
     def breathe(self):
         print("I am breathing but I am a Python!")
 
-peter = Python()
+peter = Python() #adding python snake 
 
 peter.breathe() # animal method
 peter.eat() # animal method
